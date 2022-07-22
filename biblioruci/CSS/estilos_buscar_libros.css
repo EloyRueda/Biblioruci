@@ -1,0 +1,239 @@
+/*
+    Este archivo forma parte biblioruci.org.
+    @author: Eloy Rueda Ciezar - eloyruci28@gmail.com - Desarrollador web
+
+    BiblioRuCi es freeware: cualquier persona puede modificar esta web y redistribuir su versión.
+
+    INFORMACIÓN GENERAL:
+
+        · Objetivo: Gestión de los libros, socios, préstamos, citas y preguntas de la biblioteca a través de esta web.
+
+        · Contenidos de la web:
+            - Biblioteca virtual
+            - Gestión de bases de datos con diferentes tablas relacionadas entre sí
+        
+        · Correos electrónicos del dominio:
+            - Administradores
+                _ eloyruci28@gmail.com
+                _ admin@biblioteca.com
+            - Bibliotecarios
+                _ b_1@biblioteca.com
+            - Clientes
+                _ cliente1@biblioteca.com
+                _ prueba@gmail.com
+                _ prueba2@gmail.com
+                _ prueba3@biblioteca.com
+                _ prueba4@gmail.com
+                _ prueba5@gmail.com
+                
+    DISEÑO WEB:
+
+        · Tecnologías utilizadas: 
+            - HTML5*, creado por: Tim Berners-Lee
+            - CSS3*, creado por: Håkon Wium Lie
+            - JavaScript*, creado por: Brendan Eich
+                - Librería* jQuery*, creado por: John Resig
+            - PHP*, creado por: Rasmus Lerdorf
+            - SQL*, creado por: Donald Chamberlin
+            - MySQL*, creado por: Michael Widenius, David Axmark y Allan Larsson
+
+        · Palabras clave:
+            - Biblioteca
+            - Libros
+            - Socios
+
+    MONETIZACIÓN:
+
+        · biblioruci.org. es una organización sin ánimo de lucro, por lo que no recibe ingresos.  
+
+    RECURSOS:
+
+        · Herramientas software:
+
+            - IDE*: Visual Studio Code - https://code.visualstudio.com/
+            - Software de servidor web*: XAMPP - https://www.apachefriends.org/download.html
+
+        · Bibliografías y Webgrafías:
+
+            - Manual Imprescindible de HTML4
+                _ autores: Germán Galeano, Pablo Díaz y José Carlos Sánchez 
+                _ Editorial - ANAYA Multimedia
+                _ ISBN: 84-415-1024-5
+
+            - SQL Unleashed - autores:
+                _ autores: Sakr Youness, Pierre Boutquin y Hans Ladanyl
+                _ Editorial - SAMS
+                _ ISBN: 0-672-31709-5
+
+            - https://w3schools.com 
+                _ empresa autora: Refsnes Data
+            
+            - https://github.com/Airgold3/Securesystem/tree/master/admin
+                _ autor: Santiago Fernández López, Airgold3
+            
+            - https://www.lawebdelprogramador.com/foros/SQL/718157-Actualizar-campos-vacios.html
+                _ empresa autora: Interactive Programmers Community
+
+    CONCLUSIONES:
+
+        · Facilidades:
+
+            - Crear la estructura y organización de la web
+
+        · Dificultades:
+
+            - Programar la tecnología back-end* (PHP y MySQL) para solicitar el carné, aceptar las solicitudes
+              del carné, iniciar sesión, solicitar préstamos y citas, añadir y retirar libros, 
+
+        · Aspectos a mejorar:
+
+            - Crear nuevas secciones
+            - Cambiar los estilos*
+            - Testeo en la navegación de la web para comprobar cómo interactúan los usuarios con ésta
+
+    GLOSARIO:
+
+        * HTML5 - Lenguaje de marcado (manera de codificar un documento que, junto al texto, se añade etiquetas o 
+                  anotaciones con información relativa al texto) para estructurar páginas web.
+
+        * CSS3 - Lenguaje de diseño gráfico para decorar HTML5.
+
+        * JavaScript - Lenguaje de programación que permite hacer contenido dinámico en una página web.
+
+        * Librería - Conjunto de archivos importables que se utilizan para desarrollar programas. Amplían las
+                     funcionalidades de un lenguaje de programación.
+        
+        * jQuery - Librería de JavaScript que permite mostrar animaciones al interactuar con el contenido
+                   de una página web.
+
+        * back-end o backend - Tecnología que se ejecuta en el servidor web y se encarga de la lógica de una página web.
+
+        * PHP - Lenguaje de programación back-end que permite la comunicación entre el cliente y el servidor.
+
+        * SQL - Lenguaje de programación back-end que permite gestionar y consultar bases de datos. En esta página web ha
+                sido utilizado para crear la base de datos.
+
+        * MySQL - Lenguaje de programación back-end que permite gestionar y consultar bases de datos. En esta página web
+                  ha sido utilizado para gestionar (modificar y visualizar) la base de datos.
+        
+        * IDE o Entorno de Desarrollo Integrado - Programa que proporciona al desarrollador servicios para facilitarle
+                                                  la programación
+
+        * Software para servidor web - Programas que permiten a casi cualquier ordenador ser un servidor web.
+        
+        * Estilos - Mecanismos que describe cómo se va a mostrar un documento en la pantalla. En esta página web los 
+                    estilos han sido definidos con CSS3.
+*/
+body{
+    background-color: #dddddd;
+    margin: 15px;
+}
+dt{
+    margin-top: 5px;
+}
+td{
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    text-align: center;
+}
+a{
+    color:#4573bc;
+    font-size: 1.2em;
+    margin-left: 15px;
+    margin-right: 15px;
+    text-decoration: none;
+}
+a:hover{
+    color:#527fc2;
+    font-style: bold;
+    text-decoration: underline;
+}
+a:visited{
+    color:#2f4361;
+}
+label{
+    font-size: 1.2em;
+}
+hr{
+    color:solid #b1b1b1;
+}
+table{
+    align-self: center;
+}
+.titulo{
+    text-align: center;
+    margin-top: 20px;
+    font-family: 'Times New Roman';
+    font-size: 150%;
+    font-style: bold;
+    color: #2020aa
+}
+header{
+    text-align: center;
+    background-color: #c0c0c0;
+    border: 5px solid #b1b1b1;
+    font-size: 1.75em;
+    font-family:'Geneva';
+    padding-bottom: 10px;
+}
+#tabla_cabecera{
+    text-align: center;
+}
+.buscar{
+    text-align: center;
+    margin-top: 20px;
+    background-color: #cecece;
+    border: 5px solid #b1b1b1;
+    padding: 5px;
+}
+#entrada_buscar{
+    color: #9aa9c6;
+    font-size: 1em;
+    margin: 8px;
+    border: 2px solid #828ea0;
+    border-radius: 10px;
+    padding:3px;
+}
+#boton_buscar{
+    font-size: 140%;
+}
+footer{
+    text-align: center;
+}
+table, th, td {
+    color: #000000;
+    margin: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.buscar_libros {
+    font-size: 1.5em;
+    text-align: center;
+    background-color: #b3a369;
+    border: 5px solid #6b5e30;
+    padding: 15px;
+    margin-top: 30px;
+    margin-bottom: 30px; 
+}
+.entrada_formulario{
+    background-color: #d5e3fb;
+    font-size: 1em;
+    margin: 8px;
+    border: 2px solid #6a98e8;
+    border-radius: 10px;
+    padding:3px;
+}
+#resultado {
+    font-size: 1.5em;
+}
+thead{
+    text-align: center;
+}
